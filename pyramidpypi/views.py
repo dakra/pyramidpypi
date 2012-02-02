@@ -12,7 +12,7 @@ def upload(request):
     action = request.params.get(':action')
     content = request.params.get('content')
 
-    if not (name and version and content and action == 'file_upload'):
+    if not (name and version and content.file and action == 'file_upload'):
         raise HTTPBadRequest()
 
     path = os.path.join(request.registry.settings['egg_path'], name)
