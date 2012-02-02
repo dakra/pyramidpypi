@@ -32,6 +32,7 @@ setup(name='pyramidpypi',
       install_requires=requires,
       tests_require=requires,
       test_suite="pyramidpypi",
+      license='ISC',
       entry_points = """\
       [paste.app_factory]
       main = pyramidpypi:main
