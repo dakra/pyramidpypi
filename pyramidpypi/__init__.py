@@ -6,6 +6,7 @@ def main(global_config, **settings):
     config = Configurator(settings=settings)
 
     config.add_static_view('eggs', settings['egg_path'])
+    # maybe someday I'll add nicer templates?
     config.add_static_view('static', 'static', cache_max_age=3600)
 
     config.add_route('upload', '/', request_method='POST')
