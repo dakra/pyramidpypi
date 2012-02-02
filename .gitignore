@@ -1,0 +1,11 @@
+eggs
+*.pyc
+*.cache
+*#*
+*.egg-info
+.DS_Store
+.ropeproject
+.idea
+build
+dist
+data/*
