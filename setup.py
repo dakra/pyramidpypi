@@ -14,7 +14,7 @@ requires = [
 
 setup(name='pyramidpypi',
       version='0.1',
-      description='pyramidpypi',
+      description='pyramidpypi - a very simply pypi server written in pyramid',
       long_description=README + '\n\n' +  CHANGES,
       classifiers=[
         "Programming Language :: Python",
