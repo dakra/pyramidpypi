@@ -30,8 +30,9 @@ def pypi_listing(request):
     """List all available packages including different versions"""
 
     egg_path = request.registry.settings['egg_path']
+    egg_url = request.registry.settings['egg_url']
     packages = glob.glob(os.path.join(egg_path, '*', '*'))
-    links = [request.static_url(p) for p in packages]
+    links = ['..%s%s'%(egg_url, p[len(egg_path):]) for p in packages]
     packages = [os.path.split(p)[1] for p in packages]
 
     return dict(title="All available eggs", links=links, packages=packages)
